@@ -4,10 +4,40 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" >
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Register</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
+ <div class="container">
+  <img src="assets/images/avatar.jpg" alt="Image" class="round-image">
+</div> 
+<div class="label">Name</div>
+
+<ion-item>
+  <ion-input  fill="outline" type="text" [(ngModel)]="name" placeholder="Enter Name" ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Age</ion-label>
+  <ion-input type="number" [(ngModel)]="age"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Date of Birth</ion-label>
+  <ion-input type="date" [(ngModel)]="dob"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Place</ion-label>
+  <ion-input type="text" [(ngModel)]="place"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Location</ion-label>
+  <ion-input type="text" [(ngModel)]="location"></ion-input>
+</ion-item>
+
+<ion-button expand="block" (click)="register()">Register</ion-button>
 </ion-content>

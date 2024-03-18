@@ -10,21 +10,27 @@
     <img src="assets/images/avatar.jpg" alt="Image" class="round-image">
   </div>
 
+
   <div class="label">NAME</div>
-  <ion-input fill="outline" placeholder="Enter Name" class="input-box"></ion-input>
+<ion-input fill="outline" placeholder="Enter Name" class="input-box" [(ngModel)]="name" (input)="validateName($event)"></ion-input>
+<ion-text color="danger" *ngIf="nameError">{{ nameError }}</ion-text>
 
   <div class="label">AGE</div>
-  <ion-input fill="outline" placeholder="Enter Age" class="input-box" type="number" [(ngModel)]="age"></ion-input>
+  <ion-input fill="outline" placeholder="Enter Age" class="input-box" type="number" [(ngModel)]="age" (input)="validateAge($event)"></ion-input>
+  <ion-text color="danger" *ngIf="ageError">{{ ageError }}</ion-text>
+
 
   <div class="label">DATE OF BIRTH</div>
-  <ion-input fill="outline" placeholder="Choose D.O.B" class="input-box" type="date" [(ngModel)]="dob"></ion-input>
+  <ion-input fill="outline" placeholder="Choose D.O.B" class="input-box" type="date" [(ngModel)]="dob"  (input)="validateDOB($event)"></ion-input>
+  <ion-text color="danger" *ngIf="dobError">{{ dobError }}</ion-text>
 
   <div class="label">PLACE</div>
-  <ion-input fill="outline" placeholder="Enter Place" class="input-box" type="text" [(ngModel)]="place"></ion-input>
+  <ion-input fill="outline" placeholder="Enter Place" class="input-box" type="text" [(ngModel)]="place" (input)="validatePlace($event)"></ion-input>
+  <ion-text color="danger" *ngIf="placeError">{{ placeError }}</ion-text>
 
   <div class="label">LOCATION</div>
-  <ion-input fill="outline" placeholder="Enter Location" class="input-box" type="text"
-    [(ngModel)]="location"></ion-input>
+  <ion-input fill="outline" placeholder="Enter Location" class="input-box" type="text" [(ngModel)]="location" (input)="validateLocation($event)"></ion-input>
+  <ion-text color="danger" *ngIf="locationError">{{ locationError }}</ion-text>
 
   <ion-button expand="block" (click)="register()" class="input-box">Continue</ion-button>
 

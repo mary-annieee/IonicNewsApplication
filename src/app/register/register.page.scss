@@ -13,11 +13,20 @@
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 16px;
-    color: #333; /* Change color as needed */
+    color: grey; /* Change color as needed */
     padding-left: 15px;
+    margin-top: 20px;
+
   }
   .input-box {
     border: 1px solid #ccc; /* Border color */
     border-radius: 5px; /* Rounded corners */
-    padding: 2px; /* Padding inside the box */
+    width: 98%;
+    margin: 10px;
+    margin-bottom: 2%;
+    
+    
+  }
+  .cus-ip {
+    padding: 20px;
   }

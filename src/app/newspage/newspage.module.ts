@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { NewspagePageRoutingModule } from './newspage-routing.module';
 
 import { NewspagePage } from './newspage.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { NewspagePage } from './newspage.page';
     IonicModule,
     NewspagePageRoutingModule
   ],
-  declarations: [NewspagePage]
+  declarations: [NewspagePage],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NewspagePageModule {}

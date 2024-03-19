@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { register } from 'swiper/element/bundle';
+
+register()
 
 @Component({
   selector: 'app-newspage',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewspagePage implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+  }
+
+  imageUrls: string[] = [
+    'assets/images/boozy.jpg',
+    'assets/images/beverages.png',
+    'assets/images/boozy.jpg',
+    'assets/images/beverages.png'
+  ];
+ 
+  navigate(){
+    this.router.navigateByUrl('content');
   }
 
 }

@@ -10,7 +10,7 @@
     <img src="assets/images/avatar.jpg" alt="Image" class="round-image">
   </div>
 
-
+<div class="inputContainer">
   <div class="label">NAME</div>
 <ion-input fill="outline" placeholder="Enter Name" class="input-box" [(ngModel)]="name" (input)="validateName($event)"></ion-input>
 <ion-text color="danger" *ngIf="nameError">{{ nameError }}</ion-text>
@@ -33,5 +33,5 @@
   <ion-text color="danger" *ngIf="locationError">{{ locationError }}</ion-text>
 
   <ion-button expand="block" (click)="register()" class="input-box">Continue</ion-button>
-
+</div>
 </ion-content>

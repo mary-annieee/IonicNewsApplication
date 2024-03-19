@@ -84,10 +84,20 @@ export class RegisterPage implements OnInit {
     this.validateDOB(event)
     this.validateName(event)
     this.validateLocation(event)
+    // this.router.navigateByUrl('newspage');
+
+    if (
+      this.nameError ||
+      this.ageError ||
+      this.dobError ||
+      this.placeError ||
+      this.locationError
+    ) {
+      // If any error exists, prevent navigation
+      return;
+    }
+
     this.router.navigateByUrl('newspage');
-
-
-
 
 
   }

@@ -9,6 +9,11 @@
     display: flex;
   justify-content: center; 
   }
+  .inputContainer{
+    margin: 30px;
+    
+
+  }
   .label {
     font-weight: bold;
     margin-bottom: 5px;
@@ -19,10 +24,9 @@
 
   }
   .input-box {
+   
     border: 1px solid #ccc; /* Border color */
     border-radius: 5px; /* Rounded corners */
-    width: 98%;
-    margin: 10px;
     margin-bottom: 2%;
     
     

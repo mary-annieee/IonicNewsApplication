@@ -32,6 +32,6 @@
   <ion-input fill="outline" placeholder="Enter Location" class="input-box" type="text" [(ngModel)]="location" (input)="validateLocation($event)"></ion-input>
   <ion-text color="danger" *ngIf="locationError">{{ locationError }}</ion-text>
 
-  <ion-button expand="block" (click)="register()" class="input-box">Continue</ion-button>
+  <ion-button expand="block" (click)="register()" class="button-box">Continue</ion-button>
 </div>
 </ion-content>

@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
 
   <div class="container">
     <img src="assets/images/avatar.jpg" alt="Image" class="round-image">
@@ -14,6 +14,9 @@
   <div class="label">NAME</div>
 <ion-input fill="outline" placeholder="Enter Name" class="input-box" [(ngModel)]="name" (input)="validateName($event)"></ion-input>
 <ion-text color="danger" *ngIf="nameError">{{ nameError }}</ion-text>
+
+<ion-button (click)="openImagePicker()">Pick Image</ion-button>
+<ion-img [src]="selectedImage"></ion-img>
 
   <div class="label">AGE</div>
   <ion-input fill="outline" placeholder="Enter Age" class="input-box" type="number" [(ngModel)]="age" (input)="validateAge($event)"></ion-input>

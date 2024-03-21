@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+<div class="main-container">
   <ion-title>
     TITLE1
   </ion-title>
@@ -36,7 +36,7 @@
     </ion-title>
     
 
-    <ion-list>
+    <ion-list >
       <ion-item *ngFor="let imageUrl of imageUrls" (click)="navigate()">
         <ion-card class="card-content1">
           <ion-card-content>
@@ -59,6 +59,6 @@
         </ion-card>
       </ion-item>
     </ion-list>
-
+  </div>
 
 </ion-content>

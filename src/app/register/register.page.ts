@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Plugins } from '@capacitor/core';
+import { CameraResultType, CameraSource } from '@capacitor/camera';
+const { Camera } = Plugins;
 
 @Component({
   selector: 'app-register',
@@ -19,7 +22,21 @@ export class RegisterPage implements OnInit {
   placeError: string = '';
   locationError: string="";
 
+  selectedImage: string ="";
 
+  async openImagePicker() {
+    const image = await Camera['getPhoto']({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera
+    });
+    
+    // Handle the selected image here, e.g., display it in your UI
+    alert(image.webPath);
+    this.selectedImage = image.webPath;
+
+  }
 
 
   validateName(event: any) {
